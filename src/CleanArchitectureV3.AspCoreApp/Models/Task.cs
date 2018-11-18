@@ -23,9 +23,13 @@ namespace CleanArchitectureV3.AspCoreApp.Models
 
         public bool IsComplete { get; private set; }
 
+        [Required]
+        public Category Category { get; private set; }
+
         public void SetDetails(string description, Category category)
         {
-            throw new NotImplementedException();
+            Description = description;
+            Category = category;
         }
 
         public void MarkComplete()
