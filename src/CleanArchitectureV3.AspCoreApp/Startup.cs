@@ -28,9 +28,9 @@ namespace CleanArchitectureV3.AspCoreApp
 
             services.AddSession();
             services.AddMvc();
-            //services.AddAutoMapper(GetExecutingAssembly());
+            services.AddAutoMapper(GetExecutingAssembly());
             services.AddMediatR(GetExecutingAssembly());
-            services.AddSingleton<IMapper>(_ => AutoMapperConfig.GetMapper());
+            //services.AddSingleton<IMapper>(_ => TaskProfile.GetMapper());
         }
 
         private static Assembly GetExecutingAssembly()
